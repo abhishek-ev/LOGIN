@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class="min-h-full min-w-screen flex justify-center items-center">
+      <div
+        class="flex flex-col items-center p-8 backdrop-blur-md bg-white bg-opacity-10 rounded-xl max-w-[720px] w-full"
+      >
+        <h1 class="text-2xl font-semibold my-8">Institution Signup</h1>
+        <form
+          action="/signup/institution"
+          method="post"
+          class="grid grid-cols-2 w-full"
+        >
+          <div class="m-4">
+            <div><label for="name">College Name</label></div>
+            <div>
+              <input
+                class="bg-gray-700 p-2 my-1 w-full rounded-lg"
+                type="text"
+                placeholder="College Name"
+                name="name"
+                id="name"
+              />
+            </div>
+          </div>
+          <div class="m-4">
+            <div><label for="collegecode">College Code</label></div>
+            <div>
+              <input
+                class="bg-gray-700 p-2 my-1 w-full rounded-lg"
+                type="text"
+                placeholder="College Code"
+                name="collegecode"
+                id="collegecode"
+              />
+            </div>
+          </div>
+          <div class="m-4">
+            <div><label for="email">Email</label></div>
+            <div>
+              <input
+                class="bg-gray-700 p-2 my-1 w-full rounded-lg"
+                type="email"
+                placeholder="E-Mail"
+                name="email"
+                id="email"
+              />
+            </div>
+          </div>
+          <div class="m-4">
+            <div><label for="password">Password</label></div>
+            <div>
+              <input
+                class="bg-gray-700 p-2 my-1 w-full rounded-lg"
+                type="password"
+                placeholder="Password"
+                name="password"
+                id="password"
+              />
+            </div>
+          </div>
+          <div class="m-4">
+            <div><label for="number">Phone Number</label></div>
+            <div>
+              <input
+                class="bg-gray-700 p-2 my-1 w-full rounded-lg"
+                type="number"
+                placeholder="Phone Number"
+                name="number"
+                id="number"
+              />
+            </div>
+          </div>
+          <div class="col-span-2 flex justify-around">
+            <div class="w-full m-4">
+              <input
+                type="submit"
+                value="Submit"
+                class="bg-white text-black py-2 w-full font-medium rounded-lg"
+              />
+            </div>
+            <div class="w-full m-4">
+              <input
+                type="reset"
+                value="Reset"
+                class="bg-white text-black py-2 w-full font-medium rounded-lg"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+</body>
+</html>

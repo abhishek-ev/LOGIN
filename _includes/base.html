@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% block head %}
+    <style>
+      body {
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "article article article"
+          "footer footer footer";
+        grid-template-rows: 80px auto 40px;
+        height: 100vh;
+      }
+
+      header {
+        grid-area: header;
+      }
+      main {
+        grid-area: article;
+      }
+      footer {
+        grid-area: footer;
+      }
+    </style>
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+  </head>
+  <body class="bg-[hsl(230,93%,11%)] text-white">
+    <header>CV Analysis</header>
+    <nav
+      class="flex w-full justify-between container mx-auto items-center fixed top-0 h-20 z-50 bg-[hsl(230,93%,11%)]"
+    >
+      <ul class="flex flex-row">
+        <li>
+          <a
+            href="/"
+            class="py-2 px-4 mx-2 border-2 border-transparent hover:border-blue-600 rounded-lg"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="/signup/student"
+            class="py-2 px-4 mx-2 border-transparent border-2 hover:border-blue-600 rounded-lg"
+          >
+            Student SignUp
+          </a>
+        </li>
+        <li>
+          <a
+            href="/signup/institution"
+            class="py-2 px-4 mx-2 border-transparent border-2 hover:border-blue-600 rounded-lg"
+            >Institution SignUp</a
+          >
+        </li>
+        <li>
+          <a
+            href="/login"
+            class="py-2 px-4 mx-2 border-transparent border-2 hover:border-blue-600 rounded-lg"
+            >Login</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main id="content" class="min-h-full">
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>
